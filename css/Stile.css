@@ -1,0 +1,255 @@
+/*reset css*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+/*configuração geral de body*/
+body{
+    background-color:#ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main{
+    border: solid 3px black;
+    width: 100%;
+}
+h3{
+    font-size: 50px;
+}
+p{
+    color: #0000009c;
+}
+
+li{
+    list-style: none;/*retira das listas os numeros ou bullet-points*/
+}
+
+section, footer{/*inserir cor de fundo pafa teste e depois retirar*/
+    padding: 54px 0; /*margem nterna de 54 pixels para cima e para baixo e 0 para esquerda e direita*/
+}
+
+/*header*/
+
+header{
+    background-position: center; /*posicionamento para imagem de fundo*/
+    background-size: cover; /*ocupa toda a altura e largura disponível em header*/
+    background-attachment: fixed;/*cria um efeito parallax na imagem de fundo*/
+
+}
+
+/*nav (dentro de header)*/
+nav{
+    display: flex;/*a patir do elemento pai, deixa os elementos filhos um ao lado do outro */
+    align-items: center; /*alinha os elementos no eixo x*/
+    justify-content: space-between;/*distribui os elementos pelo espaço disponivel*/
+    padding-top: 30px; /*margem interna vinda do topo*/
+}
+nav ul{/*temos qui um seletor de precedencia, toda vez que ul estivem em nav terá o comportamento determinado nos codigos abaixo*/
+    display: flex;
+    align-items: center;
+}
+nav ul a{
+    color: #ffffff; /*cor do texto*/
+    margin: 0 25px;/*margem externa, 0 para cima e pra beixo e 25 para esquerda e direita*/
+    text-transform: uppercase;/*manter o texto maiúsculo*/
+    font-size: 14px; /*tamanho da fonte*/
+    display: block; /*comportamento de bloco*/
+
+}
+
+/* animaçao de menu
+nav ul a::after{
+    content: "";
+    background-color: #93911a;
+    height: 5px;
+    width: 0%;
+    display: block;
+
+
+}
+nav ul a:hover:not(.btn)::after{ 
+    width: 100%;
+    transition: 0.2s;
+    margin: 0 auto;
+
+}
+*/
+
+.btn{
+    background-color: #4f9cf9;
+    color: #ffffff;
+    padding: 15px 20px;/*15 para cima e pa baixo e 20 para as laterais*/
+    border-radius: 10px;/*arredondamento de borda*/
+    cursor:pointer;/*manter a integridade do cursor*/
+    display: inline-block;/*manter padrão em linha dentro de um bloco*/
+    transition: 0.5s;/*tempo de transição para mudança de cor*/
+}
+.btn:hover {
+    background-color: #3580db;
+  }
+
+  /*Estilização classe banner - ainda em header*/
+.banner{
+    display: flex;
+    justify-content: center;/*alinha elemntos no eixo horizontal (x) e todos concentrados ao centro*/
+}
+.banner_text{
+    margin:50px;
+    text-align: center;
+    padding: 0 90px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.banner .banner_text h1{
+    font-size: 60px;
+    color: #ffffff;
+}
+.banner .banner_text p{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight:lighter;/*define o peso visual da fonte*/
+    margin: 18px 0;
+  }
+
+  /*<section class="produto"> linha 43 do html*/
+  /*pratica-mais*/
+.produto .container{
+    display: flex;
+    align-items: center;
+}
+.produto .produto-text{
+    width: 50%;
+    padding: 0 40px;
+
+}
+.produto .produto-img{
+    width: 50%; /*ocupa 50% do elemento pai, no caso a classe .produto*/
+}
+.produto-text p{
+    margin: 20px 0;
+}
+.produto .produto-img img{
+    width: 100%;/*ocupa 100% do elemento pai, no caso a classe .produto-img*/
+}
+
+/*  <!--início do article depoimentos--> linha 80*/
+
+.depoimentos h3{
+    text-align: center;
+}
+.depoimentos p{
+    text-align: center;
+    margin-bottom: 20px;/*margem externa a partir da parre de baixo*/
+}
+.cards{
+    display: flex;
+    justify-content: center;
+}
+.depoimentos .cards-itens{
+    background-color: #8abff1;
+    margin: 15px;
+    border-radius: 15px;
+    text-align: center;
+    width: 350px;
+}
+
+.depoimentos .cards-itens img{
+    border-radius: 100%;
+    width: 150px;
+    display: block;
+    margin: 20px auto;
+}
+.depoimentos .cards-itens .nome-user{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+   }
+   .depoimentos .cards-itens .depoimento-user{
+    font-size: 15px;
+padding: 0 15px;
+   }
+
+
+
+/*clientes linha 124*/
+  .clientes h3,
+  .clientes p{
+      text-align: center;
+     }
+.clientes.container div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;/*distribui os itens no espaço levando em consideração as bordas*/
+}
+/*footer - linha  157*/
+.final{
+    background-color: #4f9cf9;
+    text-align: center;
+   }
+   .final i{
+    color: #2418cb;
+    background-color: #ffffff;
+    font-size: 30px;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+   }
+   .final p{
+    margin-top: 10px;
+    color: #ffffff;
+   }
+   .carousel {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 1000px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%; /* Ajusta a imagem para preencher o slide */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+    padding: 12px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.next {
+    right: 0;
+    padding: 12px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+#btn_test{
+    color :yellow;
+    background-color: tomato;
+    position: absolute;
+}
