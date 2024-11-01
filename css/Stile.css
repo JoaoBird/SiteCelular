@@ -1,4 +1,4 @@
-/*reset css*/
+/reset css/
 
 *{
     margin:0;
@@ -7,13 +7,6 @@
     text-decoration: none;
     outline: none;
 }
-
-/*configuração geral de body*/
-body{
-    background-color:#ffffff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 main{
     border: solid 3px black;
     width: 100%;
@@ -26,77 +19,108 @@ p{
 }
 
 li{
-    list-style: none;/*retira das listas os numeros ou bullet-points*/
+    list-style: none;/retira das listas os numeros ou bullet-points/
 }
 
-section, footer{/*inserir cor de fundo pafa teste e depois retirar*/
-    padding: 54px 0; /*margem nterna de 54 pixels para cima e para baixo e 0 para esquerda e direita*/
+section, footer{/inserir cor de fundo pafa teste e depois retirar/
+    padding: 54px 0; /margem nterna de 54 pixels para cima e para baixo e 0 para esquerda e direita/
 }
 
-/*header*/
+/configuração geral de body/
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Fundo claro */
+}
 
-header{
-    background-position: center; /*posicionamento para imagem de fundo*/
-    background-size: cover; /*ocupa toda a altura e largura disponível em header*/
-    background-attachment: fixed;/*cria um efeito parallax na imagem de fundo*/
+
+/header/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 
 }
 
-/*nav (dentro de header)*/
-nav{
-    display: flex;/*a patir do elemento pai, deixa os elementos filhos um ao lado do outro */
-    align-items: center; /*alinha os elementos no eixo x*/
-    justify-content: space-between;/*distribui os elementos pelo espaço disponivel*/
-    padding-top: 30px; /*margem interna vinda do topo*/
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
 }
-nav ul{/*temos qui um seletor de precedencia, toda vez que ul estivem em nav terá o comportamento determinado nos codigos abaixo*/
+
+header {
+    background-color: #000; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 20px 0; /* Espaçamento em cima e embaixo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-nav ul a{
-    color: #ffffff; /*cor do texto*/
-    margin: 0 25px;/*margem externa, 0 para cima e pra beixo e 25 para esquerda e direita*/
-    text-transform: uppercase;/*manter o texto maiúsculo*/
-    font-size: 14px; /*tamanho da fonte*/
-    display: block; /*comportamento de bloco*/
 
+nav img {
+    height: 40px; /* Altura do logo */
 }
 
-/* animaçao de menu
-nav ul a::after{
-    content: "";
-    background-color: #93911a;
-    height: 5px;
-    width: 0%;
-    display: block;
-
-
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens */
+    margin: 0;
 }
-nav ul a:hover:not(.btn)::after{ 
-    width: 100%;
-    transition: 0.2s;
-    margin: 0 auto;
 
+nav ul li a {
+    color: #fff; /* Cor do texto dos links */
+    text-decoration: none;
+    font-size: 16px; /* Tamanho da fonte */
+    transition: color 0.3s; /* Efeito de transição */
 }
-*/
+
+nav ul li a:hover {
+    color: #f0f0f0; /* Cor do texto ao passar o mouse */
+}
+
+.banner {
+    text-align: center; /* Centraliza o texto do banner */
+    padding: 50px 0; /* Espaçamento */
+}
+
+.banner h1 {
+    font-size: 48px; /* Tamanho do título */
+    margin: 10px 0; /* Margens */
+}
+
+.banner p {
+    font-size: 20px; /* Tamanho da descrição */
+    color: #ccc; /* Cor da descrição */
+}
+
+
+
 
 .btn{
     background-color: #4f9cf9;
     color: #ffffff;
-    padding: 15px 20px;/*15 para cima e pa baixo e 20 para as laterais*/
-    border-radius: 10px;/*arredondamento de borda*/
-    cursor:pointer;/*manter a integridade do cursor*/
-    display: inline-block;/*manter padrão em linha dentro de um bloco*/
-    transition: 0.5s;/*tempo de transição para mudança de cor*/
+    padding: 15px 20px;/15 para cima e pa baixo e 20 para as laterais/
+    border-radius: 10px;/arredondamento de borda/
+    cursor:pointer;/manter a integridade do cursor/
+    display: inline-block;/manter padrão em linha dentro de um bloco/
+    transition: 0.5s;/tempo de transição para mudança de cor/
 }
 .btn:hover {
     background-color: #3580db;
   }
 
-  /*Estilização classe banner - ainda em header*/
+  /Estilização classe banner - ainda em header/
 .banner{
     display: flex;
-    justify-content: center;/*alinha elemntos no eixo horizontal (x) e todos concentrados ao centro*/
+    justify-content: center;/alinha elemntos no eixo horizontal (x) e todos concentrados ao centro/
 }
 .banner_text{
     margin:50px;
@@ -112,12 +136,12 @@ nav ul a:hover:not(.btn)::after{
 .banner .banner_text p{
     font-size: 20px;
     color: #ffffff;
-    font-weight:lighter;/*define o peso visual da fonte*/
+    font-weight:lighter;/define o peso visual da fonte/
     margin: 18px 0;
   }
 
-  /*<section class="produto"> linha 43 do html*/
-  /*pratica-mais*/
+  /<section class="produto"> linha 43 do html/
+  /pratica-mais/
 .produto .container{
     display: flex;
     align-items: center;
@@ -128,13 +152,13 @@ nav ul a:hover:not(.btn)::after{
 
 }
 .produto .produto-img{
-    width: 50%; /*ocupa 50% do elemento pai, no caso a classe .produto*/
+    width: 50%; /ocupa 50% do elemento pai, no caso a classe .produto/
 }
 .produto-text p{
     margin: 20px 0;
 }
 .produto .produto-img img{
-    width: 100%;/*ocupa 100% do elemento pai, no caso a classe .produto-img*/
+    width: 100%;/ocupa 100% do elemento pai, no caso a classe .produto-img/
 }
 
 /*  <!--início do article depoimentos--> linha 80*/
@@ -144,7 +168,7 @@ nav ul a:hover:not(.btn)::after{
 }
 .depoimentos p{
     text-align: center;
-    margin-bottom: 20px;/*margem externa a partir da parre de baixo*/
+    margin-bottom: 20px;/margem externa a partir da parre de baixo/
 }
 .cards{
     display: flex;
@@ -176,7 +200,7 @@ padding: 0 15px;
 
 
 
-/*clientes linha 124*/
+/clientes linha 124/
   .clientes h3,
   .clientes p{
       text-align: center;
@@ -184,9 +208,9 @@ padding: 0 15px;
 .clientes.container div{
     display: flex;
     align-items: center;
-    justify-content: space-around;/*distribui os itens no espaço levando em consideração as bordas*/
+    justify-content: space-around;/distribui os itens no espaço levando em consideração as bordas/
 }
-/*footer - linha  157*/
+/footer - linha  157/
 .final{
     background-color: #4f9cf9;
     text-align: center;
@@ -203,53 +227,93 @@ padding: 0 15px;
     margin-top: 10px;
     color: #ffffff;
    }
+   /* Estilização principal para centralizar o contêiner */
    .carousel {
-    display: flex;
-    justify-content: center;
     position: relative;
-    width: 1000px;
+    width: 90%; /* Largura do carrossel */
+    max-width: 800px; /* Largura máxima do carrossel */
     overflow: hidden;
-    border: 1px solid #ddd;
+    margin: auto; /* Centraliza o carrossel na página */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
 .slide {
-    min-width: 100%;
+    flex: 0 0 100%; /* Cada slide ocupa 100% da largura */
     box-sizing: border-box;
 }
 
 .slide img {
-    width: 100%; /* Ajusta a imagem para preencher o slide */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.slide img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: transform 0.3s, opacity 0.3s;
 }
 
-button {
+
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     border: none;
     padding: 10px;
     cursor: pointer;
+    z-index: 1;
 }
 
-.prev {
-    left: 0;
-    padding: 12px;
-    cursor: pointer;
-    background-color: rgb(255, 255, 255);
-
+button.prev {
+    left: 10px;
 }
 
-.next {
-    right: 0;
-    padding: 12px;
-    cursor: pointer;
-    background-color: rgb(255, 255, 255);
+button.next {
+    right: 10px;
 }
 
-#btn_test{
-    color :yellow;
-    background-color: tomato;
-    position: absolute;
+button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+footer {
+    background-color: #333; /* cor de fundo escura */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer .links a:hover {
+    color: #4f9cf9; /* cor ao passar o mouse */
 }

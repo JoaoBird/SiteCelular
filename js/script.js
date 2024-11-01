@@ -1,33 +1,35 @@
+SCRIPT JS 
 let currentSlide = 0;
-const slides = document.getElementsByClassName('slide');
-const btn_next = document.querySelector('.next');
-const btn_prev = document.querySelector('.prev');
-const btn = document.getElementById('btn_test');
-const containerslides=document.querySelector('.slides-container');
+const slides = document.querySelectorAll('.slide');
+const indicators = document.querySelector('.indicators');
 
-console.log(containerslides.children)
-array.forEach(element => {
-  
+// Cria os indicadores
+slides.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (index === currentSlide) dot.classList.add('active');
+    dot.onclick = () => showSlide(index);
+    indicators.appendChild(dot);
 });
+
+function updateIndicators() {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentSlide].classList.add('active');
+}
+
 function showSlide(index) {
-  const totalSlides = slides.length;
-  currentSlide = (index + totalSlides) % totalSlides; 
-  const offset = -currentSlide * 100;
-  document.querySelector('.slides-container').style.transform = `translateX(${offset}%)`;
+    const totalSlides = slides.length;
+    currentSlide = (index + totalSlides) % totalSlides; // Garante que o índice esteja no intervalo
+    const offset = -currentSlide * 100; // Cada slide ocupa 100% da largura
+    document.querySelector('.slides').style.transform = translateX(${offset}%);
+    updateIndicators();
 }
 
-function nextSlide() {
-  showSlide(currentSlide + 1);
-}
+// Mudar slide automaticamente a cada 3 segundos
+setInterval(() => showSlide(currentSlide + 1), 3000);
 
-function prevSlide() {
-  showSlide(currentSlide - 1);
-}
-
-
-btn_next.addEventListener('click', nextSlide);  
-btn_prev.addEventListener('click', prevSlide);  
-
-
-setInterval(nextSlide, 3000);
-//as fotos estao no container, ent tenho que "tirar elas" do container e passar para as proximas 
+// Exibir a última imagem ao lado da primeira
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlide); // Mostra o slide inicial
+});
