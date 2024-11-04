@@ -34,10 +34,12 @@ function atualizarPreco() {
 
 window.adicionarAoCarrinho = function(produto) {
     const item = {
+        produto:produto,
         cor: corSelecionada,
         preco: precoBase,
         imagem: imagensPorCor[corSelecionada],
         return: produto
+        
     };
     
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];

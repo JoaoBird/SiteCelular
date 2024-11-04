@@ -40,7 +40,15 @@ window.selecionarArmazenamento = function(armazenamento) {
         style: 'currency',
         currency: 'BRL'
     });
-}
+    
+    // Calcula o valor da parcela e atualiza na tela
+    const parcela = preco / 12;
+    document.getElementById('parcelamento').innerText = `Em até 12x de ${parcela.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    })} sem juros`;
+};
+
 
 // Função para adicionar ao carrinho
 window.adicionarAoCarrinho = function(produto) {

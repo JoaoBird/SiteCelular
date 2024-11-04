@@ -248,9 +248,16 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #ffffff;
-  font-size: 16px;
+  color: #ffffff !important; /* Força o texto a ficar branco */
+  font-weight: bold;
   transition: color 0.3s;
+  line-height: 30px; /* Altere para o valor da altura do cabeçalho */
+}
+nav ul li a:hover {
+  color: #4f9cf9 !important; /* Define o texto em azul ao passar o mouse */
+}
+.header, .header * {
+  color: #ffffff; /* Define a cor do texto para branco para todos os elementos dentro do cabeçalho */
 }
 
 /* Dropdown */

@@ -1,11 +1,10 @@
-/* header.css */
-
+/* Cabeçalho */
 .cart-header {
     position: relative;
-    background-color: #f5f5f7; /* Fundo claro para o cabeçalho */
+    background-color: #f5f5f7;
     padding: 10px;
     z-index: 1000;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; /* Padronizando a fonte */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 .container {
@@ -21,10 +20,11 @@
     height: 40px;
 }
 
+/* Navegação */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* Padronizando o espaçamento */
+    gap: 30px;
 }
 
 nav ul li {
@@ -32,46 +32,62 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #0a0a0a; /* Cor escura para contraste */
+    color: #0a0a0a;
     text-decoration: none;
     font-size: 16px;
-    font-weight: 500; /* Estilo de fonte consistente */
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #4f9cf9; /* Cor ao passar o mouse */
+    color: #4f9cf9;
 }
 
+/* Dropdown */
 nav ul .dropdown {
     display: none;
     position: absolute;
-    background-color: #ffffff; /* Fundo claro para o dropdown */
-    border-radius: 12px; /* Ajustando o raio para combinar com o estilo */
-    box-shadow: 0 2px 5px rgba(44, 44, 44, 0.671);
-    z-index: 10000;
-    width: 200px;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
+    padding: 10px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    width: 180px;
+    text-align: center; /* Centraliza o texto no dropdown */
 }
 
 nav ul li:hover .dropdown {
     display: block;
+    opacity: 1;
+    transform: translate(-50%, 0); /* Mantém a posição centralizada do dropdown */
 }
 
-nav ul .dropdown li {
-    padding: 10px 20px; /* Padding uniforme */
+nav .dropdown li {
+    padding: 10px 0;
 }
 
-nav ul .dropdown li a {
-    color: #cccccc; /* Cor do texto no dropdown */
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+nav .dropdown li a {
+    color: #ffffff;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul .dropdown li a:hover {
-    background-color: rgba(134, 134, 134, 0.1); /* Fundo ao passar o mouse */
-    color: #ffffff; /* Cor do texto ao passar o mouse */
+nav .dropdown li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #4f9cf9;
+}
+
+/* Item ativo do menu */
+nav ul li a.active {
+    color: #4f9cf9;
 }
 
 /* Estilo do vídeo de fundo */
@@ -82,13 +98,13 @@ nav ul .dropdown li a:hover {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1; /* Coloca o vídeo atrás de outros elementos */
+    z-index: -1;
 }
 
 .video-background video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que o vídeo cubra a área sem distorções */
+    object-fit: cover;
 }
 
 .overlay {
@@ -97,22 +113,23 @@ nav ul .dropdown li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Overlay para melhorar a legibilidade */
-    z-index: 1; /* Coloca o overlay acima do vídeo */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 /* Estilo do cabeçalho */
 header {
     position: relative;
-    color: #1d1d1f; /* Cor padronizada para o cabeçalho */
+    color: #1d1d1f;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding: 20px;
-    height: 51vh; /* Altura do cabeçalho */
-    z-index: 1000; /* Certifique-se de que o cabeçalho esteja acima do overlay */
+    height: 51vh;
+    z-index: 1000;
 }
+
 header .overlay {
     content: '';
     position: absolute;

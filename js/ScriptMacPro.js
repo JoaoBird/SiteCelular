@@ -92,13 +92,26 @@ function calcularPreco() {
 function atualizarPreco() {
     const preco = calcularPreco();
     const precoElement = document.getElementById('preco');
+    
     if (precoElement) {
         precoElement.innerText = preco.toLocaleString('pt-BR', {
             style: 'currency',
             currency: 'BRL'
         });
     }
+    
+    // Calcula o valor da parcela e atualiza o texto do parcelamento
+    const parcela = preco / 12;
+    const parcelamentoElement = document.getElementById('parcelamento');
+    
+    if (parcelamentoElement) {
+        parcelamentoElement.innerText = `Em até 12x de ${parcela.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        })} sem juros`;
+    }
 }
+
 
 // Função para ver o carrinho
 window.verCarrinho = function() {
