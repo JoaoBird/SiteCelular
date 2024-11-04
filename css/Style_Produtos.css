@@ -1,0 +1,338 @@
+/* Style_Produtos.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Container principal */
+#produtos {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f5f5f7;
+}
+
+/* Título do produto */
+#produtos h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #1d1d1f;
+}
+
+/* Container do produto */
+.produto {
+    background: white;
+    border-radius: 18px;
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 40px; /* Espaço entre produtos */
+}
+
+/* Imagem do produto */
+#iphone-img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin: 10px auto;
+    display: block;
+}
+
+/* Detalhes do produto */
+.detalhes {
+    width: 50%;
+    padding: 20px;
+}
+
+.detalhes p {
+    text-align: justify; 
+    font-size: 17px;
+    line-height: 1.5;
+    color: #86868b;
+    margin-bottom: 30px;
+}
+
+/* Opções de cor */
+.color-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.color-button {
+    width: 40px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid #0000002f; 
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.color-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-button.selected {
+    border-color: #0071e3;
+    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.3), 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Opções de armazenamento */
+.storage-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.storage-button {
+    padding: 10px 20px;
+    border: 1px solid #000000;
+    border-radius: 980px;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.storage-button:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.storage-button.selected {
+    background-color: #0071e3;
+    color: white;
+    border-color: #0071e3;
+}
+
+/* Preço */
+.preco {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 30px 0;
+}
+
+/* Botão de compra */
+button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid #000000;
+    border-radius: 980px;
+    padding: 12px 24px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+button:hover {
+    background-color: #000000;
+    color: white;
+}
+
+/* Informações adicionais */
+.additional-info {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f5f5f7;
+    border-radius: 12px;
+}
+
+/* Disponibilidade */
+.availability {
+    display: block;
+    color: #68b54d;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* Parcelamento */
+.installment {
+    font-size: 14px;
+    color: #86868b;
+    margin-top: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333; /* Cor de fundo escura */
+    color: #ffffff; /* Cor do texto */
+    padding: 40px 20px; /* Espaçamento interno */
+    font-family: 'Helvetica Neue', sans-serif; /* Fonte limpa e moderna */
+}
+
+.container {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Padronizando o espaçamento */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #ffffff; /* Texto branco para o cabeçalho */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4f9cf9; /* Cor ao passar o mouse */
+}
+
+nav ul .dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo preto para o dropdown */
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 10000;
+    width: 200px;
+    top: 100%;
+    left: 0;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul .dropdown li {
+    padding: 10px 20px; /* Padding uniforme */
+}
+
+nav ul .dropdown li a {
+    color: #ffffff; /* Texto branco no dropdown */
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul .dropdown li a:hover {
+    background-color: #000000; /* Fundo preto ao passar o mouse */
+    color: #ffffff; /* Manter texto branco ao passar o mouse */
+}
+
+/* Estilo do vídeo de fundo */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloca o vídeo atrás de outros elementos */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra a área sem distorções */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay para melhorar a legibilidade */
+    z-index: 1; /* Coloca o overlay acima do vídeo */
+}
+
+/* Estilo do cabeçalho */
+header {
+    position: relative;
+    color: #1d1d1f; /* Cor padronizada para o cabeçalho */
+    display: flex;
+    flex-direction: column;
+    align-items: start ;
+    justify-content: flex-start;
+    padding: 20px;
+    height: 51vh; /* Altura do cabeçalho */
+    z-index: 1000; /* Certifique-se de que o cabeçalho esteja acima do overlay */
+}
+.container {
+    display: flex; /* Usar Flexbox para o layout */
+    justify-content: space-between; /* Espaço entre os itens */
+    flex-wrap: wrap; /* Permitir quebra de linha em telas menores */
+}
+.footer-links {
+    flex: 1; /* Cada seção ocupa espaço igual */
+    margin: 0 20px; /* Margem horizontal entre as seções */
+}
+
+.footer-links h4 {
+    margin-bottom: 15px; /* Espaço abaixo do título */
+    font-weight: bold; /* Título em negrito */
+}
+
+.footer-links ul {
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links ul li {
+    margin-bottom: 10px; /* Espaço entre os itens da lista */
+}
+
+.footer-links a {
+    color: #ffffff; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s; /* Transição suave de cor */
+}
+
+.footer-links a:hover {
+    color: #4f9cf9; /* Cor ao passar o mouse */
+}
+
+.footer-social {
+    flex: 0; /* Ocupa espaço igual */
+    margin: 0 20px; /* Margem horizontal */
+}
+
+.social-icons {
+    display: flex; /* Usar Flexbox para os ícones de redes sociais */
+    margin-top: 5px; /* Espaçamento acima dos ícones */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Espaçamento horizontal entre os ícones */
+    color: #ffffff; /* Cor dos ícones */
+    font-size: 20px; /* Tamanho dos ícones */
+}
+
+.footer-contact {
+    flex: 1; /* Ocupa espaço igual */
+    margin: 0 20px; /* Margem horizontal */
+}
+
+.footer-bottom {
+    text-align: center; /* Centralizar o texto do rodapé */
+    margin-top: 20px; /* Espaçamento acima do rodapé */
+    font-size: 14px; /* Tamanho da fonte do texto legal */
+}

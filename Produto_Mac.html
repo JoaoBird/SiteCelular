@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/Stile.css" type="text/css">
+    <link rel="stylesheet" href="css/Header.css" type="text/css">
+    <link rel="stylesheet" href="css/Style_Produtos.css" type="text/css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./js/ScriptMacPro.js"></script>
+</head>
+<body>
+    <header>
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="./Videos/Vídeo_MacBook_pro.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <div class="overlay"></div>
+        </div>
+        <div class="container">
+            <div class="logo">
+                <a href="./prj.html">
+                    <img src="Imagens/apple_dark.svg" alt="Descrição da imagem">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./prj.html">HOME</a></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">PRODUTOS</a>
+                        <ul class="dropdown">
+                            <li><a href="/Produto_Iphone.html">iPhone 16</a></li>
+                            <li><a href="/Produto_AWatch.html">Apple Watch</a></li>
+                            <li><a href="/Produto_Mac.html">MacBook Pro</a></li>
+                            <li><a href="/Produto_AirPod.html">AirPod Max</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./carrinho.html">CARRINHO</a></li>
+                    <li><a href="./suporte.html">SUPORTE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="produtos">
+            <h2>MacBook Pro</h2>
+            <div class="produto">
+                <img id="mac-pro" src="/Imagens/Cores_MacBook/MacBook-prata.jpg" alt="MacBook Pro">
+                
+                <div class="detalhes">
+                    <p>O MacBook Pro combina desempenho extraordinário e eficiência com o Apple Silicon, ideal para profissionais criativos. 
+                       Seu design elegante e a tela Retina oferecem uma experiência visual deslumbrante, 
+                       enquanto os recursos de segurança avançados protegem seus dados. 
+                       Eleve suas ideias com um laptop que inspira.</p>
+                    
+                    <p>Escolha sua cor:</p>
+                    <div class="color-options">
+                        <button class="color-button" style="background-color: #1d1d1f;" onclick="selecionarCor('preto')"></button>
+                        <button class="color-button" style="background-color: #d3d2d2;" onclick="selecionarCor('prata')"></button>
+                    </div>
+    
+                    <p>Capacidade:</p>
+                    <div class="storage-options">
+                        <button class="storage-button" onclick="selecionarArmazenamento(512)">512 GB</button>
+                        <button class="storage-button" onclick="selecionarArmazenamento(1000)">1TB</button>
+                    </div>
+                    <p>Processador:</p>
+                    <div class="chip-options">
+                        <button class="chip-button" onclick="selecionarChip('M4 PRO')">M4 PRO</button>
+                        <button class="chip-button" onclick="selecionarChip('M4 MAX')">M4 MAX</button>
+                    </div>
+    
+                    <div class="preco"><span id="preco">R$ 20.000,00</span></div>
+                    
+                    <p class="installment">Em até 12x de R$ 1833,33 sem juros</p>
+                    
+                    <button onclick="adicionarAoCarrinho('MacBook Pro')">Adicionar ao Carrinho</button>
+                    
+                    <span class="availability">Disponível para entrega imediata</span>
+    
+                    <div class="additional-info">
+                        <p>Frete grátis para todo o Brasil</p>
+                        <p>Retire em uma Apple Store</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <h4>Sobre</h4>
+                <ul>
+                    <li><a href="#">Nossa Empresa</a></li>
+                    <li><a href="#">Carreiras</a></li>
+                    <li><a href="#">Sustentabilidade</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>Email: contato@exemplo.com</p>
+                <p>Telefone: (11) 1234-5678</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Apple Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - Produtos Apple</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styleSuporte.css" type="text/css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/Stile.css" type="text/css"> 
+    <link rel="stylesheet" href="css/Header.css" type="text/css">
+    <link rel="stylesheet" href="css/Style_Produtos.css" type="text/css">
+     
+</head>
+    <style>
+        /* Relacionado as perguntas */
+        .faq-container {
+            margin: 20px 0;
+            border-radius: 40px;
+        }
+
+        .faq-card {
+            margin-bottom: 10px; /* Espaço entre os cartões */
+            border: 1px solid #ddd; /* Borda leve */
+            border-radius: 8px; /* Bordas arredondadas */
+            overflow: hidden; /* Esconde o conteúdo que transborda */
+            border-radius: 40px;
+        }
+
+        summary {
+            display: flex; /* Flex para alinhar o conteúdo */
+            justify-content: space-between; /* Espaça os itens */
+            padding: 15px; /* Espaçamento interno */
+            cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            background-color: #f9f9f9; /* Cor de fundo */
+            border-bottom: 1px solid #ddd; /* Borda inferior */
+            border-radius: 40px;
+        }
+
+        summary:hover {
+            background-color: #efefef; /* Cor ao passar o mouse */
+        }
+
+        .dropdown-content {
+            padding: 15px; /* Espaçamento interno */
+            background-color: #fff; /* Cor de fundo do conteúdo */
+            border-radius: 40px;
+        }
+
+        details[open] summary {
+            font-weight: bold; /* Destaca o título quando aberto */
+            
+        }
+
+        .dropdown-toggle {
+            transition: transform 0.1s; /* Transição suave para a rotação */
+            border-radius: 40px;
+        }
+
+        details[open] .dropdown-toggle {
+            transform: rotate(180deg); /* Rotaciona a seta para cima quando aberto */
+        }
+    </style>
+</head>
+<main>
+    <header>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="logo">
+                <a href="./prj.html">
+                    <img src="Imagens/apple_dark.svg" alt="Descrição da imagem">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./prj.html">HOME</a></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">PRODUTOS</a>
+                        <ul class="dropdown">
+                            <li><a href="/Produto_Iphone.html">iPhone 16</a></li>
+                            <li><a href="/Produto_AWatch.html">Apple Watch</a></li>
+                            <li><a href="/Produto_Mac.html">MacBook Pro</a></li>
+                            <li><a href="/Produto_AirPod.html">AirPod Max</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./carrinho.html">CARRINHO</a></li>
+                    <li><a href="./suporte.html">SUPORTE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+</main>
+<body>
+   
+    <main>
+        
+        
+       
+
+        <section class="faq-section">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <details class="faq-card">
+                    <summary>
+                        <h3>1. Como posso restaurar meu iPhone para as configurações de fábrica?</h3>
+                        <span class="dropdown-toggle">&#x25BC;</span>
+                    </summary>
+                    <div class="dropdown-content">
+                        <p>Para restaurar seu iPhone: vá para Ajustes > Geral > Transferir ou Redefinir iPhone > Apagar Todo o Conteúdo e Ajustes. Siga as instruções na tela.</p>
+                    </div>
+                </details>
+                <details class="faq-card">
+                    <summary>
+                        <h3>2. O que fazer se meu MacBook não liga?</h3>
+                        <span class="dropdown-toggle">&#x25BC;</span>
+                    </summary>
+                    <div class="dropdown-content">
+                        <p>Se o seu MacBook não liga: tente pressionar e segurar o botão de liga/desliga por 10 segundos. Se não funcionar, conecte-o a uma fonte de energia e tente novamente. Se o problema persistir, entre em contato com o suporte técnico.</p>
+                    </div>
+                </details>
+                <details class="faq-card">
+                    <summary>
+                        <h3>3. Como posso emparelhar meus AirPods com meu dispositivo?</h3>
+                        <span class="dropdown-toggle">&#x25BC;</span>
+                    </summary>
+                    <div class="dropdown-content">
+                        <p>Para emparelhar seus AirPods: abra a tampa do estojo próximo ao seu dispositivo. Um pop-up aparecerá no seu dispositivo, basta tocar em Conectar e seguir as instruções na tela.</p>
+                    </div>
+                </details>
+                <details class="faq-card">
+                    <summary>
+                        <h3>4. Como posso monitorar minha saúde com o Apple Watch?</h3>
+                        <span class="dropdown-toggle">&#x25BC;</span>
+                    </summary>
+                    <div class="dropdown-content">
+                        <p>O Apple Watch possui vários recursos de monitoramento de saúde, incluindo monitoramento de frequência cardíaca, rastreamento de exercícios e monitoramento do sono. Você pode acessar esses recursos no aplicativo Saúde no seu iPhone.</p>
+                    </div>
+                </details>
+                <details class="faq-card">
+                    <summary>
+                        <h3>5. O que fazer se meu Apple Watch não sincroniza com meu iPhone?</h3>
+                        <span class="dropdown-toggle">&#x25BC;</span>
+                    </summary>
+                    <div class="dropdown-content">
+                        <p>Se seu Apple Watch não sincroniza: verifique se ambos os dispositivos estão atualizados. Tente reiniciar.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+    
+        <!-- Rodapé -->
+        
+        <footer>
+            <div class="container">
+                <div class="footer-links">
+                    <h4>Sobre</h4>
+                    <ul>
+                        <li><a href="#">Nossa Empresa</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                        <li><a href="#">Sustentabilidade</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Ajuda</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-social">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+        
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p>Email: contato@exemplo.com</p>
+                    <p>Telefone: (11) 1234-5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Apple Todos os direitos reservados.</p>
+            </div>
+        </footer>
+        
+    </body>
+    </html>
+                        

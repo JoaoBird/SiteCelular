@@ -1,57 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apple Cart Style</title>
-  <link rel="stylesheet" href="css/styleCar.css" type="text/css">  
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/Stile.css" type="text/css">
+    <link rel="stylesheet" href="css/styleCar.css" type="text/css">
+    <link rel="stylesheet" href="css/Header.css" type="text/css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./js/ScriptCarrinho.js"></script>
 </head>
 <body>
-  <header class="header">
-    <h1 class="header-title">Apple Store</h1>
-  </header>
-  
-  <section class="cart-container">
-    <h2 class="cart-title">Your Bag</h2>
-
-    <section class="cart-items">
-      <div class="cart-item">
-        <img src="product-image.jpg" alt="Product" class="item-image">
-        <div class="item-details">
-          <p class="item-name">Apple Product 1</p>
-          <p class="item-price">$999.00</p>
-          <p class="item-quantity">Quantity: 1</p>
+<header class="cart-header">
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="./Videos/AppleEco.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="logo">
+            <a href="./prj.html">
+                <img src="Imagens/apple_dark.svg" alt="Descrição da imagem">
+            </a>
         </div>
-        <button class="remove-button">Remove</button>
-      </div>
+        <nav>
+            <ul>
+                <li><a href="./prj.html">HOME</a></li>
+                <li>
+                    <a href="#" class="dropdown-toggle">PRODUTOS</a>
+                    <ul class="dropdown">
+                        <li><a href="/Produto_Iphone.html">iPhone 16</a></li>
+                        <li><a href="/Produto_AWatch.html">Apple Watch</a></li>
+                        <li><a href="/Produto_Mac.html">MacBook Pro</a></li>
+                        <li><a href="/Produto_AirPod.html">AirPod Max</a></li>
+                    </ul>
+                </li>
+                <li><a href="./carrinho.html">CARRINHO</a></li>
+                <li><a href="./suporte.html">SUPORTE</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-      <div class="cart-item">
-        <img src="product-image.jpg" alt="Product" class="item-image">
-        <div class="item-details">
-          <p class="item-name">Apple Product 2</p>
-          <p class="item-price">$799.00</p>
-          <p class="item-quantity">Quantity: 1</p>
+<main>
+    <div class="cart-container">
+        <h2>Carrinho de Compras</h2>
+        <div class="cart-items" id="cart-items">
+            <!-- Itens do carrinho serão inseridos aqui via JavaScript -->
         </div>
-        <button class="remove-button">Remove</button>
-      </div>
-    </section>
 
-    <section class="cart-summary">
-      <div class="summary-item">
-        <p class="summary-text">Subtotal</p>
-        <p class="summary-price">$1798.00</p>
-      </div>
-      <div class="summary-item">
-        <p class="summary-text">Shipping</p>
-        <p class="summary-price">Free</p>
-      </div>
-      <div class="summary-item total">
-        <p class="summary-text"><strong>Total</strong></p>
-        <p class="summary-price"><strong>$1798.00</strong></p>
-      </div>
-      <button class="checkout-button">Checkout</button>
-    </section>
-  </section>
+        <div class="cart-summary">
+            <div class="summary-item">
+                <span>Subtotal:</span>
+                <span id="subtotal">R$ 0,00</span>
+            </div>
+            <div class="summary-item">
+                <span>Frete:</span>
+                <span id="frete">Grátis</span>
+            </div>
+            <div class="summary-item total">
+                <span>Total:</span>
+                <span id="total">R$ 0,00</span>
+            </div>
+            <button id="checkout-btn" class="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <h4>Sobre</h4>
+            <ul>
+                <li><a href="#">Nossa Empresa</a></li>
+                <li><a href="#">Carreiras</a></li>
+                <li><a href="#">Sustentabilidade</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Suporte</h4>
+            <ul>
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contato</h4>
+            <p>Email: contato@exemplo.com</p>
+            <p>Telefone: (11) 1234-5678</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 Apple Todos os direitos reservados.</p>
+    </div>
+</footer>
 </body>
 </html>

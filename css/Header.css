@@ -1,0 +1,125 @@
+/* header.css */
+
+.cart-header {
+    position: relative;
+    background-color: #f5f5f7; /* Fundo claro para o cabeçalho */
+    padding: 10px;
+    z-index: 1000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; /* Padronizando a fonte */
+}
+
+.container {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Padronizando o espaçamento */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #0a0a0a; /* Cor escura para contraste */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500; /* Estilo de fonte consistente */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4f9cf9; /* Cor ao passar o mouse */
+}
+
+nav ul .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ffffff; /* Fundo claro para o dropdown */
+    border-radius: 12px; /* Ajustando o raio para combinar com o estilo */
+    box-shadow: 0 2px 5px rgba(44, 44, 44, 0.671);
+    z-index: 10000;
+    width: 200px;
+    top: 100%;
+    left: 0;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul .dropdown li {
+    padding: 10px 20px; /* Padding uniforme */
+}
+
+nav ul .dropdown li a {
+    color: #cccccc; /* Cor do texto no dropdown */
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul .dropdown li a:hover {
+    background-color: rgba(134, 134, 134, 0.1); /* Fundo ao passar o mouse */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo do vídeo de fundo */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloca o vídeo atrás de outros elementos */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra a área sem distorções */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay para melhorar a legibilidade */
+    z-index: 1; /* Coloca o overlay acima do vídeo */
+}
+
+/* Estilo do cabeçalho */
+header {
+    position: relative;
+    color: #1d1d1f; /* Cor padronizada para o cabeçalho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    height: 51vh; /* Altura do cabeçalho */
+    z-index: 1000; /* Certifique-se de que o cabeçalho esteja acima do overlay */
+}
+header .overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}

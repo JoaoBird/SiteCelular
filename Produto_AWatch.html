@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Watch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/Stile.css" type="text/css">
+    <link rel="stylesheet" href="css/Header.css" type="text/css">
+    <link rel="stylesheet" href="css/Style_Produtos.css" type="text/css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./js/ScriptAWatch.js"></script>
+</head>
+<body>
+    <header>
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="./Videos/Video_apple_watch.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <div class="overlay"></div>
+        </div>
+        <div class="container">
+            <div class="logo">
+                <a href="./prj.html">
+                    <img src="Imagens/apple_dark.svg" alt="Logo da Apple">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./prj.html">HOME</a></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">PRODUTOS</a>
+                        <ul class="dropdown">
+                            <li><a href="/Produto_Iphone.html">iPhone 16</a></li>
+                            <li><a href="/Produto_AWatch.html">Apple Watch</a></li>
+                            <li><a href="/Produto_Mac.html">MacBook Pro</a></li>
+                            <li><a href="/Produto_AirPod.html">AirPod Max</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./carrinho.html">CARRINHO</a></li>
+                    <li><a href="./suporte.html">SUPORTE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="produtos">
+            <h2>Apple Watch</h2>
+            <div class="produto">
+                <img id="AWatch" src="/Imagens/Cores_AWatch/file.png" alt="Apple Watch">
+                
+                <div class="detalhes">
+                    <p>O Apple Watch é um smartwatch que combina tecnologia avançada com estilo, oferecendo recursos como monitoramento de saúde, notificações e personalização. 
+                       Com uma interface intuitiva, permite acesso fácil a aplicativos e informações essenciais. 
+                       Ideal para quem busca praticidade e conectividade no dia a dia.</p>
+                    
+                    <p>Escolha sua cor:</p>
+                    <div class="color-options">
+                        <button class="color-button" style="background-color: #000000;" onclick="selecionarCor('preto')"></button>
+                        <button class="color-button" style="background-color: #89b5c7;" onclick="selecionarCor('prata')"></button>
+                        <button class="color-button" style="background-color: #ffaf90;" onclick="selecionarCor('ourorosa')"></button>
+                    </div>
+    
+                    <div class="preco">R$ 4.000,00</div>
+                    
+                    <p class="installment">Em até 12x de R$ 333,33 sem juros</p>
+                    
+                    <button onclick="adicionarAoCarrinho('Apple Watch')">Adicionar ao Carrinho</button>
+                    
+                    <span class="availability">Disponível para entrega imediata</span>
+    
+                    <div class="additional-info">
+                        <p>Frete grátis para todo o Brasil</p>
+                        <p>Retire em uma Apple Store</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <h4>Sobre</h4>
+                <ul>
+                    <li><a href="#">Nossa Empresa</a></li>
+                    <li><a href="#">Carreiras</a></li>
+                    <li><a href="#">Sustentabilidade</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h4>Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>Email: contato@exemplo.com</p>
+                <p>Telefone: (11) 1234-5678</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Apple Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
