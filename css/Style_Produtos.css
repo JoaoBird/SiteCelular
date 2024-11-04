@@ -125,8 +125,8 @@
 button {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    border: 1px solid #000000;
-    border-radius: 980px;
+    border: 2px solid #000000;
+    border-radius: 1200px;
     padding: 12px 24px;
     font-size: 17px;
     cursor: pointer;
@@ -188,10 +188,12 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 30px; /* Padronizando o espaçamento */
+    
 }
 
 nav ul li {
     position: relative;
+    
 }
 
 nav ul li a {
@@ -233,7 +235,7 @@ nav ul .dropdown li a {
 }
 
 nav ul .dropdown li a:hover {
-    background-color: #000000; /* Fundo preto ao passar o mouse */
+    background-color: #2e26262a; /* Fundo preto ao passar o mouse */
     color: #ffffff; /* Manter texto branco ao passar o mouse */
 }
 
@@ -267,7 +269,7 @@ nav ul .dropdown li a:hover {
 /* Estilo do cabeçalho */
 header {
     position: relative;
-    color: #1d1d1f; /* Cor padronizada para o cabeçalho */
+    color: #ffffff !important;
     display: flex;
     flex-direction: column;
     align-items: start ;
