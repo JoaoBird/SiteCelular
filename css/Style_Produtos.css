@@ -95,8 +95,8 @@
 
 .storage-button {
     padding: 10px 20px;
-    border: 1px solid #000000;
-    border-radius: 980px;
+    border: 2px solid #000000;
+    border-radius: 1200px;
     background: none;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -126,7 +126,7 @@ button {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     border: 2px solid #000000;
-    border-radius: 1200px;
+    border-radius: 1440px;
     padding: 12px 24px;
     font-size: 17px;
     cursor: pointer;
