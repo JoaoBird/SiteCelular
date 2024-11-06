@@ -13,187 +13,230 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="./js/script.js"></script>
-     
-</head>
     <style>
-        /* Relacionado as perguntas */
-        .faq-container {
-            margin: 20px 0;
-            border-radius: 40px;
+        header {
+            background-image: url('Imagens/Suporte.png');
+            background-size: cover;
+            padding: 20px;
+            color: #ffffff!important;
+            text-shadow: #ffffff;
+            text-align: center;
+        }
+        header h2{
+            color: #ffffff!important;
+            text-shadow: #ffffff;
+            margin-top: auto;
+            font-size: large;
+        }
+        .faq-card summary {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-card summary .dropdown-toggle {
+            transition: transform 0.3s ease;
+        }
+        .faq-card[open] summary .dropdown-toggle {
+            transform: rotate(180deg);
         }
 
-        .faq-card {
-            margin-bottom: 10px; /* Espaço entre os cartões */
-            border: 1px solid #ddd; /* Borda leve */
-            border-radius: 8px; /* Bordas arredondadas */
-            overflow: hidden; /* Esconde o conteúdo que transborda */
-            border-radius: 40px;
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000!important; /* Fundo branco da página */
         }
 
-        summary {
-            display: flex; /* Flex para alinhar o conteúdo */
-            justify-content: space-between; /* Espaça os itens */
-            padding: 15px; /* Espaçamento interno */
-            cursor: pointer; /* Muda o cursor para indicar que é clicável */
-            background-color: #f9f9f9; /* Cor de fundo */
-            border-bottom: 1px solid #ddd; /* Borda inferior */
-            border-radius: 40px;
+        nav {
+            padding: 20px; /* Espaçamento ao redor do nav */
+            margin-top: 1cm;
         }
 
-        summary:hover {
-            background-color: #efefef; /* Cor ao passar o mouse */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px; /* Espaçamento entre os itens do menu */
         }
 
-        .dropdown-content {
-            padding: 15px; /* Espaçamento interno */
-            background-color: #fff; /* Cor de fundo do conteúdo */
-            border-radius: 40px;
+        nav a {
+            color: #f9f7f7!important; /* Cor do texto forçada para branco */
+            text-decoration: none; /* Remove o sublinhado */
+            transition: color 0.3s; /* Efeito de transição para hover */
         }
 
-        details[open] summary {
-            font-weight: bold; /* Destaca o título quando aberto */
-            
+        nav a:hover {
+            color: #4f9cf9!important; /* Cor azul ao passar o mouse */
         }
+        .overlay {
+        position: initial;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(255, 255, 255);
+        z-index: 1;
+        font-size: larger;
+       
+    
+    }
 
-        .dropdown-toggle {
-            transition: transform 0.1s; /* Transição suave para a rotação */
-            border-radius: 40px;
-        }
-
-        details[open] .dropdown-toggle {
-            transform: rotate(180deg); /* Rotaciona a seta para cima quando aberto */
-        }
     </style>
 </head>
-<main>
-    <header>
+<body>
+    
+<header>
+    
+    <div class="overlay">
+        <h2>Suporte</h2>
     </div>
-    <div class="overlay"></div>
     <div class="container">
+        
         <div class="logo">
-            <a href="./prj.html">
-                <img src="Imagens/apple_dark.svg" alt="Descrição da imagem">
+            <a href="Home.html">
+                <img src="Imagens/logo_apple-White.png" alt="Descrição da imagem">
+                
             </a>
         </div>
         <nav>
+            
             <ul>
-                <li><a href="#">HOME</a></li>
+                <li><a href="Home.html">HOME</a></li>
                 <li>
-                <a href="#" class="dropdown-toggle">PRODUTOS</a>
-                <ul class="dropdown">
-                    <li><a href="/Produto_Iphone.html">iPhone 16</a></li>
-                    <li><a href="/Produto_AWatch.html">Apple Watch</a></li>
-                    <li><a href="/Produto_Mac.html">MacBook Pro</a></li>
-                    <li><a href="/Produto_AirPod.html">AirPod Max</a></li>
-                    <!-- Adicione mais produtos conforme necessário -->
-                </li>
+                    <a href="#" class="dropdown-toggle">PRODUTOS</a>
+                    <ul class="dropdown">
+                        <li><a href="/Produto_Iphone.html">iPhone 16</a></li>
+                        <li><a href="/Produto_AWatch.html">Apple Watch</a></li>
+                        <li><a href="/Produto_Mac.html">MacBook Pro</a></li>
+                        <li><a href="/Produto_AirPod.html">AirPod Max</a></li>
                     </ul>
-
+                </li>
                 <li><a href="./carrinho.html">CARRINHO</a></li>
                 <li><a href="./suporte.html">SUPORTE</a></li>
             </ul>
         </nav>
+        
     </div>
-    </header>
+</header>
+
+<main>
     
+    <section class="faq-section">
+        <h1>Perguntas Frequentes</h1>
+        <div class="faq-container">
+            <details class="faq-card">
+                <summary>
+                    <h3>1. Como posso restaurar meu iPhone para as configurações de fábrica?</h3>
+                    <span class="dropdown-toggle">&#x25BC;</span>
+                </summary>
+                <div class="dropdown-content">
+                    <p>Para restaurar seu iPhone: vá para Ajustes > Geral > Transferir ou Redefinir iPhone > Apagar Todo o Conteúdo e Ajustes. Siga as instruções na tela.</p>
+                </div>
+            </details>
+            <details class="faq-card">
+                <summary>
+                    <h3>2. O que fazer se meu MacBook não liga?</h3>
+                    <span class="dropdown-toggle">&#x25BC;</span>
+                </summary>
+                <div class="dropdown-content">
+                    <p>Se o seu MacBook não liga: tente pressionar e segurar o botão de liga/desliga por 10 segundos. Se não funcionar, conecte-o a uma fonte de energia e tente novamente. Se o problema persistir, entre em contato com o suporte técnico.</p>
+                </div>
+            </details>
+            <details class="faq-card">
+                <summary>
+                    <h3>3. Como posso emparelhar meus AirPods com meu dispositivo?</h3>
+                    <span class="dropdown-toggle">&#x25BC;</span>
+                </summary>
+                <div class="dropdown-content">
+                    <p>Para emparelhar seus AirPods: abra a tampa do estojo próximo ao seu dispositivo. Um pop-up aparecerá no seu dispositivo, basta tocar em Conectar e seguir as instruções na tela.</p>
+                </div>
+            </details>
+            <details class="faq-card">
+                <summary>
+                    <h3>4. Como posso monitorar minha saúde com o Apple Watch?</h3>
+                    <span class="dropdown-toggle">&#x25BC;</span>
+                </summary>
+                <div class="dropdown-content">
+                    <p>O Apple Watch possui vários recursos de monitoramento de saúde, incluindo monitoramento de frequência cardíaca, rastreamento de exercícios e monitoramento do sono. Você pode acessar esses recursos no aplicativo Saúde no seu iPhone.</p>
+                </div>
+            </details>
+            <details class="faq-card">
+                <summary>
+                    <h3>5. O que fazer se meu Apple Watch não sincroniza com meu iPhone?</h3>
+                    <span class="dropdown-toggle">&#x25BC;</span>
+                </summary>
+                <div class="dropdown-content">
+                    <p>Se seu Apple Watch não sincroniza: verifique se ambos os dispositivos estão atualizados. Tente reiniciar.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="/suporte.html">Ajuda</a></li>
+                    <li><a href="/suporte.html">Contato</a></li>
+                    <li><a href="/suporte.html">FAQ</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h4>Redes Sociais dos criadores</h4>
+                <ul class="social-icons">
+                    <li>
+                        <a href="https://www.instagram.com/joaocarlosfava/" class="fa fa-instagram"></a>
+                        <span><a href="https://www.instagram.com/joaocarlosfava/" >@joaocarlosfava</a></span>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/salomaokonjunski/" class="fa fa-instagram"></a>
+                        <span><a href="https://www.instagram.com/salomaokonjunski/" >@SalomaoKonjunski</a></span>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/el_pedroso44/" class="fa fa-instagram"></a>
+                        <span><a href="https://www.instagram.com/el_pedroso44/" >@el_pedroso44</a></span>
+                    </li>
+                </ul>
+            </div>
+            
+            <style>
+                .footer-social .social-icons {
+                    list-style: none;
+                    padding: 0;
+                }
+            
+                .footer-social .social-icons li {
+                    margin-bottom: 10px;
+                    display: flex;         /* Alinha os itens horizontalmente */
+                    align-items: center;   /* Alinha os itens verticalmente no centro */
+                }
+            
+                .footer-social .social-icons li a {
+                    margin-right: 2px;    /* Dá um espaçamento entre o ícone e o nome */
+                }
+            
+                .footer-social .social-icons li span {
+                    font-size: 14px;
+                    color: #ffffff;
+                }
+            </style>
+            
+    
+    
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>Email: contato@exemplo.com</p>
+                <p>Telefone: (11) 1234-5678</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Site criado por Joao Salomao e Elisson.</p>
+            <p>Insipirado no site da apple usando seus produtos como base para projeto academico</p>
+        </div>
+    </footer>
 </main>
-<body>
-   
-    <main>
-        
-        <section class="faq-section">
-            <h2>Perguntas Frequentes</h2>
-            <div class="faq-container">
-                <details class="faq-card">
-                    <summary>
-                        <h3>1. Como posso restaurar meu iPhone para as configurações de fábrica?</h3>
-                        <span class="dropdown-toggle">&#x25BC;</span>
-                    </summary>
-                    <div class="dropdown-content">
-                        <p>Para restaurar seu iPhone: vá para Ajustes > Geral > Transferir ou Redefinir iPhone > Apagar Todo o Conteúdo e Ajustes. Siga as instruções na tela.</p>
-                    </div>
-                </details>
-                <details class="faq-card">
-                    <summary>
-                        <h3>2. O que fazer se meu MacBook não liga?</h3>
-                        <span class="dropdown-toggle">&#x25BC;</span>
-                    </summary>
-                    <div class="dropdown-content">
-                        <p>Se o seu MacBook não liga: tente pressionar e segurar o botão de liga/desliga por 10 segundos. Se não funcionar, conecte-o a uma fonte de energia e tente novamente. Se o problema persistir, entre em contato com o suporte técnico.</p>
-                    </div>
-                </details>
-                <details class="faq-card">
-                    <summary>
-                        <h3>3. Como posso emparelhar meus AirPods com meu dispositivo?</h3>
-                        <span class="dropdown-toggle">&#x25BC;</span>
-                    </summary>
-                    <div class="dropdown-content">
-                        <p>Para emparelhar seus AirPods: abra a tampa do estojo próximo ao seu dispositivo. Um pop-up aparecerá no seu dispositivo, basta tocar em Conectar e seguir as instruções na tela.</p>
-                    </div>
-                </details>
-                <details class="faq-card">
-                    <summary>
-                        <h3>4. Como posso monitorar minha saúde com o Apple Watch?</h3>
-                        <span class="dropdown-toggle">&#x25BC;</span>
-                    </summary>
-                    <div class="dropdown-content">
-                        <p>O Apple Watch possui vários recursos de monitoramento de saúde, incluindo monitoramento de frequência cardíaca, rastreamento de exercícios e monitoramento do sono. Você pode acessar esses recursos no aplicativo Saúde no seu iPhone.</p>
-                    </div>
-                </details>
-                <details class="faq-card">
-                    <summary>
-                        <h3>5. O que fazer se meu Apple Watch não sincroniza com meu iPhone?</h3>
-                        <span class="dropdown-toggle">&#x25BC;</span>
-                    </summary>
-                    <div class="dropdown-content">
-                        <p>Se seu Apple Watch não sincroniza: verifique se ambos os dispositivos estão atualizados. Tente reiniciar.</p>
-                    </div>
-                </details>
-            </div>
-        </section>
-    
-        <!-- Rodapé -->
-        
-        <footer>
-            <div class="container">
-                <div class="footer-links">
-                    <h4>Sobre</h4>
-                    <ul>
-                        <li><a href="#">Nossa Empresa</a></li>
-                        <li><a href="#">Carreiras</a></li>
-                        <li><a href="#">Sustentabilidade</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Suporte</h4>
-                    <ul>
-                        <li><a href="#">Ajuda</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-        
-                <div class="footer-social">
-                    <h4>Redes Sociais</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                    </div>
-                </div>
-        
-                <div class="footer-contact">
-                    <h4>Contato</h4>
-                    <p>Email: contato@exemplo.com</p>
-                    <p>Telefone: (11) 1234-5678</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2024 Apple Todos os direitos reservados.</p>
-            </div>
-        </footer>
-        
-    </body>
-    </html>
-                        
+</body>
+</html>

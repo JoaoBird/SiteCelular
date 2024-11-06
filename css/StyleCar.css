@@ -25,12 +25,11 @@ body {
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
+  gap: 20px; /* Espaçamento entre os itens do menu */
 }
 
-nav ul li {
-  margin-left: 10px; /* Reduzir o espaçamento entre itens de navegação */
-}
 
 nav ul li a {
   text-decoration: none;
@@ -142,7 +141,7 @@ nav ul li a {
     padding: 5px 0; /* Adiciona um padding vertical */
 }
 
-.checkout-btn {
+.checkout-btn{
     margin-top: 20px; /* Espaçamento acima do botão */
     padding: 10px 20px; /* Adiciona padding ao botão */
     background-color: #007bff; /* Cor de fundo do botão */
@@ -151,6 +150,16 @@ nav ul li a {
     border-radius: 5px; /* Bordas arredondadas */
     cursor: pointer; /* Muda o cursor ao passar sobre o botão */
 }
+.checkout-btn{
+  margin-top: 20px; /* Espaçamento acima do botão */
+  padding: 10px 20px; /* Adiciona padding ao botão */
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
 
 .checkout-btn:hover {
     background-color: #0056b3; /* Cor do botão ao passar o mouse */
@@ -165,18 +174,31 @@ nav ul li a {
   align-items: center;
 }
 
-.checkout-btn {
-  width: 100%;
-  padding: 10px 15px; /* Ajustado para um tamanho menor */
-  background-color: #4CAF50;
+.checkout-btn, .pdf-btn {
+  background-color: #4CAF50; /* Verde */
   color: white;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1em; /* Ajuste no tamanho da fonte */
-  transition: background-color 0.3s;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  display: inline-block;
 }
 
+.checkout-btn:hover, .pdf-btn:hover {
+  background-color: #45a049; /* Verde mais escuro no hover */
+}
+
+/* Estilo específico para o botão de PDF */
+.pdf-btn {
+  background-color: #007bff; /* Azul para diferenciar do botão de finalizar compra */
+}
+
+.pdf-btn:hover {
+  background-color: #0069d9; /* Azul mais escuro no hover */
+}
 .checkout-btn:hover {
   background-color: #45a049;
 }
@@ -251,7 +273,7 @@ nav ul li a {
   color: #ffffff !important; /* Força o texto a ficar branco */
   font-weight: bold;
   transition: color 0.3s;
-  line-height: 30px; /* Altere para o valor da altura do cabeçalho */
+  
 }
 nav ul li a:hover {
   color: #4f9cf9 !important; /* Define o texto em azul ao passar o mouse */
@@ -292,4 +314,19 @@ nav .dropdown li a {
 
 nav .dropdown li a:hover {
   background-color: #f0f0f03a; /* Muda a cor do fundo ao passar o mouse */
+}
+#mensagemAgradecimento {
+  position: relative;
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  padding: 50px 0;
+  margin-top: 50px;
+}
+
+.container-compra-finalizada {
+  margin-bottom: 100px; /* ou o valor que desejar */
+}
+.conteudo-principal {
+  min-height: 80vh; /* Ajuste o valor conforme necessário */
 }

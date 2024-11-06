@@ -17,10 +17,11 @@ body {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 0%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    display: flex; align-items: center;
 }
 
 nav {
@@ -31,7 +32,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 nav ul li {
@@ -39,36 +40,43 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #000; /* Texto escuro para contraste */
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    color: #ffffff !important; /* Força o texto a ficar branco */
+    font-weight: bold;
+    transition: color 0.3s;
+    line-height: 40px; /* Altere para o valor da altura do cabeçalho */
 }
 
 nav ul li a:hover {
     color: #4f9cf9;
 }
 
-nav ul .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    min-width: 200px;
-    padding: 10px 0;
+nav ul li.dropdown {
+    display: none; /* Esconde o dropdown por padrão */
+    position: absolute; /* Para que o dropdown apareça abaixo do item pai */
+    background-color: rgba(0, 0, 0, 0); /* Cor do fundo do dropdown */
+    
+    box-shadow: 0 2px 8px rgb(255, 255, 255); /* Sombra opcional */
+    z-index: 1000; /* Para garantir que o dropdown fique acima de outros elementos */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Animação suave */
+    opacity: 0; /* Começa invisível */
+    transform: translateY(-10px); /* Animação de movimento para cima */
 }
 
 nav ul li:hover .dropdown {
-    display: block;
+    display: block; /* Exibe o dropdown ao passar o mouse */
+    opacity: 1; /* Torna visível */
+    transform: translateY(0); /* Reseta a posição */
 }
 
 nav ul .dropdown li {
     display: block;
 }
+nav .dropdown li a {
+    display: block; /* Para aumentar a área clicável */
+    padding: 10px; /* Adicione algum preenchimento */
+    color: rgb(255, 255, 255); /* Cor do texto do dropdown */
+    text-decoration: none; /* Remove o sublinhado */
+  }
 
 nav ul .dropdown li a {
     color: #333;
@@ -79,8 +87,10 @@ nav ul .dropdown li a {
 }
 
 nav ul .dropdown li a:hover {
-    background-color: rgba(79, 156, 249, 0.1);
-    color: #4f9cf9;
+    background-color: #f0f0f03a; /* Muda a cor do fundo ao passar o mouse */
+    
+    
+    
 }
 
 /* Seção de Produtos */
@@ -237,7 +247,7 @@ nav ul .dropdown li a:hover {
 footer {
     background-color: #333; /* Cor de fundo escura */
     color: #ffffff; /* Cor do texto */
-    padding: 40px 20px; /* Espaçamento interno */
+    padding: 20px 10px; /* Espaçamento interno */
     font-family: 'Helvetica Neue', sans-serif; /* Fonte limpa e moderna */
 }
 
@@ -263,7 +273,7 @@ footer {
 }
 
 .footer-links ul li {
-    margin-bottom: 10px; /* Espaço entre os itens da lista */
+    margin-bottom: 1px; /* Espaço entre os itens da lista */
 }
 
 .footer-links a {
@@ -299,6 +309,6 @@ footer {
 
 .footer-bottom {
     text-align: center; /* Centralizar o texto do rodapé */
-    margin-top: 20px; /* Espaçamento acima do rodapé */
+    margin-top: 10px; /* Espaçamento acima do rodapé */
     font-size: 14px; /* Tamanho da fonte do texto legal */
 }

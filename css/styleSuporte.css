@@ -8,31 +8,135 @@
 /* Body */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f8f8f8; /* Cor de fundo suave */
-    color: #333; /* Cor do texto */
+    background-color: #f8f8f88c; /* Cor de fundo suave */
+    color: #000000; /* Cor do texto */
 }
 
-/* Container */
+
+/* Cabeçalho */
+.cart-header {
+    position: relative;
+    background-color: #ffffff;
+    padding: 10px;
+    z-index: 1000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
 .container {
-    max-width: 1200px;
+    max-width: auto;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 40px;
+    background-color: #ffffff00;
+}
+.logo{
+    margin-left: 10px;
+    color: aliceblue;
+    text-align: center;
+    text-decoration-color: aliceblue;
+}
+
+
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #0c0c0c;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4f9cf9;
     
 }
 
-/* Estilo do Cabeçalho */
+/* Dropdown */
+nav ul .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(252, 250, 250, 0.753);
+    border-radius: 15px;
+    padding: 10px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.347);
+    border: 2px solid rgb(255, 255, 255);
+    width: 180px;
+    text-align: center; /* Centraliza o texto no dropdown */
+}
+nav ul li:hover .dropdown {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, 0); /* Mantém a posição centralizada do dropdown */
+}
+
+nav .dropdown li {
+    padding: 10px 0;
+}
+
+nav .dropdown li a {
+    color: #ffffff;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav .dropdown li a:hover {
+    background-color: rgba(203, 196, 196, 0);
+    color: #4f9cf9;
+}
+
+/* Item ativo do menu */
+nav ul li a.active {
+    color: #4f9cf9;
+}
+
+
+
+
+
+/* Estilo do cabeçalho */
 header {
     position: relative;
-    color: rgb(56, 55, 55);
+    color: #1d1d1f;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px 0;
-    background-image: url('/Imagens/Suporte.png');
-    background-size: cover;
-    background-position: center;
-    height: 44vh;
+    padding: 20px;
+    height: 51vh;
+    z-index: 1000;
+}
+h2{
+    
+    text-align: center;
+    text-decoration-color: #ffffff;
+    color: #ffffff!important;
+  
+
 }
 
 header .overlay {
@@ -42,64 +146,10 @@ header .overlay {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(244, 236, 236, 0.785)5;
+    background-color: rgb(251, 250, 250);
     z-index: 1;
 }
 
-header .logo img {
-    max-width: 150px; /* Tamanho do logo */
-    z-index: 2;
-}
-
-/* Navegação */
-nav {
-    z-index: 2;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px; /* Espaço entre os itens do menu */
-}
-
-nav a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s; /* Transição suave */
-}
-
-nav a:hover {
-    background-color: rgb(234, 234, 234); /* Efeito ao passar o mouse */
-}
-
-/* Dropdown */
-.dropdown {
-    display: none; /* Oculta o dropdown por padrão */
-    position: absolute;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 10px;
-    z-index: 1000;
-}
-
-nav li:hover .dropdown {
-    display: block; /* Mostra o dropdown ao passar o mouse */
-}
-
-.dropdown li {
-    margin: 0; /* Remove margens dos itens do dropdown */
-}
-
-.dropdown a {
-    color: #93939371; /* Cor dos links do dropdown */
-    padding: 10px 15px;
-    display: block; /* Faz o link ocupar todo o espaço */
-}
-
-.dropdown a:hover {
-    background-color: #efefef; /* Efeito ao passar o mouse nos links do dropdown */
-}
 
 /* Seção de Perguntas Frequentes */
 .faq-section {
@@ -141,193 +191,52 @@ nav li:hover .dropdown {
 
   /* header.css */
 
-.cart-header {
-    position: relative;
-    background-color: #f5f5f7; /* Fundo claro para o cabeçalho */
-    padding: 10px;
-    z-index: 1000;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; /* Padronizando a fonte */
-}
-
-.container {
-    max-width: auto;
-    margin: 0 auto;
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo img {
-    height: 40px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px; /* Padronizando o espaçamento */
-}
-
-nav ul li {
-    position: relative;
-    color: #ebebeb;
-}
-
-nav ul li a {
-    color: #ebebeb; /* Texto branco para o cabeçalho */
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #4f9cf9; /* Cor ao passar o mouse */
-}
-
-nav ul .dropdown {
-    display: none;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.9); /* Fundo preto para o dropdown */
-    border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 10000;
-    width: 200px;
-    top: 100%;
-    left: 0;
-}
-
-nav ul li:hover .dropdown {
-    display: block;
-}
-
-nav ul .dropdown li {
-    padding: 10px 20px; /* Padding uniforme */
-}
-
-nav ul .dropdown li a {
-    color: #ff0000; /* Texto branco no dropdown */
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul .dropdown li a:hover {
-    background-color: #000000; /* Fundo preto ao passar o mouse */
-    color: #ffffff; /* Manter texto branco ao passar o mouse */
-}
-
-/* Estilo do vídeo de fundo */
-.video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1; /* Coloca o vídeo atrás de outros elementos */
-}
-
-.video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que o vídeo cubra a área sem distorções */
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Overlay para melhorar a legibilidade */
-    z-index: 1; /* Coloca o overlay acima do vídeo */
-}
-
-/* Estilo do cabeçalho */
-header {
-    position: relative;
-    color: #1d1d1f; /* Cor padronizada para o cabeçalho */
-    display: flex;
-    flex-direction: column;
-    align-items: start ;
-    justify-content: flex-start;
-    padding: 20px;
-    height: 44vh; /* Altura do cabeçalho */
-    z-index: 1000; /* Certifique-se de que o cabeçalho esteja acima do overlay */
-}
-.container {
-    display: flex; /* Usar Flexbox para o layout */
-    justify-content: space-between; /* Espaço entre os itens */
-    flex-wrap: wrap; /* Permitir quebra de linha em telas menores */
-}
 
 /* Rodapé */
 footer {
-    background-color: #333; /* Cor de fundo escura */
-    color: #7471719d; /* Cor do texto */
-    padding: 40px 20px; /* Espaçamento interno */
-    font-family: 'Helvetica Neue', sans-serif; /* Fonte limpa e moderna */
-}
-
-.container {
-    display: flex; /* Usar Flexbox para o layout */
-    justify-content: space-between; /* Espaço entre os itens */
-    flex-wrap: wrap; /* Permitir quebra de linha em telas menores */
-}
-
-.footer-links {
-    flex: 1; /* Cada seção ocupa espaço igual */
-    margin: 0 20px; /* Margem horizontal entre as seções */
-}
-
-.footer-links h4 {
-    margin-bottom: 15px; /* Espaço abaixo do título */
-    font-weight: bold; /* Título em negrito */
-}
-
-.footer-links ul {
-    list-style: none; /* Remove marcadores da lista */
-    padding: 0; /* Remove padding */
-}
-
-.footer-links ul li {
-    margin-bottom: 10px; /* Espaço entre os itens da lista */
-}
-
-.footer-links a {
-    color: #ffffff; /* Cor dos links */
-    text-decoration: none; /* Remove sublinhado */
-    transition: color 0.3s; /* Transição suave de cor */
-}
-
-.footer-links a:hover {
-    color: #4f9cf9; /* Cor ao passar o mouse */
-}
-
-.footer-social {
-    flex: 0; /* Ocupa espaço igual */
-    margin: 0 20px; /* Margem horizontal */
-}
-
-.social-icons {
-    display: flex; /* Usar Flexbox para os ícones de redes sociais */
-    margin-top: 5px; /* Espaçamento acima dos ícones */
-}
-
-.social-icons a {
-    margin: 0 10px; /* Espaçamento horizontal entre os ícones */
-    color: #ffffff; /* Cor dos ícones */
-    font-size: 20px; /* Tamanho dos ícones */
-}
-
-.footer-contact {
-    flex: 1; /* Ocupa espaço igual */
-    margin: 0 20px; /* Margem horizontal */
-}
-
-.footer-bottom {
-    text-align: center; /* Centralizar o texto do rodapé */
-    margin-top: 20px; /* Espaçamento acima do rodapé */
-    font-size: 14px; /* Tamanho da fonte do texto legal */
-}
+    background-color: #333;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .footer-links {
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .footer-links h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #4f9cf9;
+  }
+  
+  .footer-contact {
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+  }
 
